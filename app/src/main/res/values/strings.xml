@@ -1,0 +1,141 @@
+<resources>
+
+    <!-- /////////////// NAVBAR String values \\\\\\\\\\\\\\\ -->
+
+    <string name="title_home">Home</string>
+
+    <string name="title_dashboard">Terms And Conditions</string>
+
+    <string name="title_notifications">Notifications</string>
+
+
+    <!-- /////////////// FIRST PAGE String values \\\\\\\\\\\\\\\ -->
+
+    <string name="app_name">Micro Finance Application</string>
+
+    <string name="home_display">Please select START to begin the verification process!</string>
+
+    <string name="home_button_text">START</string>
+
+
+    <!-- /////////////// SECOND PAGE String values \\\\\\\\\\\\\\\ -->
+
+    <string name="header_text">Verification Application</string>
+
+    <string name="checkbox_dec">I Agree to Privacy Policy</string>
+
+    <string name="terms_and_cons">View the Terms And Conditions <a href="https://www.tgpdc.com/">Here</a></string>
+
+    <string name="button_2_text">BEGIN</string>
+
+
+    <!-- /////////////// FIRST VERIFICATION PAGE String values \\\\\\\\\\\\\\\ -->
+
+    <string name="finance_amount">Please select your desired amount</string>
+
+    <string-array name="loan_list_array">
+        <item>R100</item>
+        <item>R200</item>
+        <item>R300</item>
+        <item>R400</item>
+        <item>R500</item>
+        <item>R600</item>
+        <item>R700</item>
+        <item>R800</item>
+        <item>R900</item>
+        <item>R1000</item>
+    </string-array>
+
+    <string name="first_ver_button">NEXT</string>
+
+    <string name="phone_number">Please Enter Your Phone Number</string>
+
+    <string name="id_photo">ID Photo</string>
+
+    <string name="proof_of_address_photo">POA Photo</string>
+
+
+    <!-- /////////////// THIRD PAGE String values \\\\\\\\\\\\\\\ -->
+
+    <string name="first_name">Enter First Name</string>
+
+    <string name="surname">Enter Surname</string>
+
+    <string name="email_address">Enter Email Address</string>
+
+    <string name="id_number">Enter ID Number</string>
+
+    <string name="next_button">NEXT</string>
+
+    <!--    <string name="show_button">SHOW</string>-->
+
+
+    <!-- /////////////// FOURTH PAGE String values \\\\\\\\\\\\\\\ -->
+
+    <string name="bank_dropdown">Enter Your Bank</string>
+
+    <string-array name="bank_names_array">
+        <item>FNB</item>
+        <item>ABSA</item>
+        <item>NEDBANK</item>
+        <item>STANDARD BANK</item>
+        <item>CAPITEC</item>
+        <item>TYME BANK</item>
+    </string-array>
+
+    <string name="acc_num">Enter Your Account Number</string>
+
+    <string name="branch_code">Enter Your Branch Code</string>
+
+    <string name="verifyButton">SUBMIT</string>
+
+
+    <!-- /////////////// FIFTH PAGE String values \\\\\\\\\\\\\\\ -->
+
+    <string name="first_name_view">First Name:</string>
+
+    <string name="surname_view">Surname:</string>
+
+    <string name="email_view">Email Address:</string>
+
+    <string name="phone_number_view">Phone Number:</string>
+
+    <string name="id_number_view">ID Number:</string>
+
+    <string name="bank_name_view">Bank Name:</string>
+
+    <string name="bank_acc_num_view">Bank Account Number:</string>
+
+    <string name="bank_branch_code_view">Bank Branch Code:</string>
+
+    <string name="user_info_display">Please ensure that all the information displayed above is correct.
+        You may click on "VERIFY" to process your application.</string>
+
+    <string name="finalVerificationButton">VERIFY</string>
+
+
+    <!-- /////////////// SIXTH PAGE String values \\\\\\\\\\\\\\\ -->
+
+    <string name="application_msg1">To the respected applicant, your details were successfully captured and
+    a verification check has been done using the details that you have provided us.</string>
+
+    <string name="application_msg_prov_approved">Upon further validation of your application, the status of
+    your application has been provisionally approved. For further assistance, please click on the
+    "Call Back" button below and a representative will be in touch.</string>
+
+    <string name="application_msg_pending">Upon further validation of your application, the status of
+    your application is currently pending. For further assistance, please click on the
+    "Call Back" button below and a representative will be in touch.</string>
+
+    <string name="application_msg_declined">Upon further validation of your application, we regret to inform
+        you that the status of your application has been declined.</string>
+
+    <string name="button_pending">PENDING</string>
+
+    <string name="button_approved">APPLY AGAIN</string>
+
+
+    <!-- /////////////// SEVENTH PAGE String values \\\\\\\\\\\\\\\ -->
+
+
+</resources>
