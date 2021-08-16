@@ -11,7 +11,7 @@
 
     <!-- /////////////// FIRST PAGE String values \\\\\\\\\\\\\\\ -->
 
-    <string name="app_name">Micro Finance Application</string>
+    <string name="app_name">Micro Finance App</string>
 
     <string name="home_display">Please select START to begin the verification process!</string>
 
@@ -22,7 +22,7 @@
 
     <string name="header_text">Verification Application</string>
 
-    <string name="checkbox_dec">I Agree to Privacy Policy</string>
+    <string name="checkbox_dec">I Agree to The Privacy Policy</string>
 
     <string name="terms_and_cons">View the Terms And Conditions <a href="https://www.tgpdc.com/">Here</a></string>
 
@@ -31,7 +31,7 @@
 
     <!-- /////////////// FIRST VERIFICATION PAGE String values \\\\\\\\\\\\\\\ -->
 
-    <string name="finance_amount">Please select your desired amount</string>
+    <string name="finance_amount">Please Select Your Desired Amount</string>
 
     <string-array name="loan_list_array">
         <item>R100</item>
@@ -72,7 +72,7 @@
 
     <!-- /////////////// FOURTH PAGE String values \\\\\\\\\\\\\\\ -->
 
-    <string name="bank_dropdown">Enter Your Bank</string>
+    <string name="bank_dropdown">Select Your Bank</string>
 
     <string-array name="bank_names_array">
         <item>FNB</item>
@@ -108,6 +108,8 @@
 
     <string name="bank_branch_code_view">Bank Branch Code:</string>
 
+    <string name="loan_amount_view">Loan Amount:</string>
+
     <string name="user_info_display">Please ensure that all the information displayed above is correct.
         You may click on "VERIFY" to process your application.</string>
 
@@ -132,7 +134,7 @@
 
     <string name="button_pending">PENDING</string>
 
-    <string name="button_approved">APPLY AGAIN</string>
+    <string name="button_approved">APPLY</string>
 
 
     <!-- /////////////// SEVENTH PAGE String values \\\\\\\\\\\\\\\ -->

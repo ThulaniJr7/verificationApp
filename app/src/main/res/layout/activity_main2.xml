@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-<!-- T's & C's Page Here!!! -->
+    <!-- T's & C's Page Here!!! -->
 
     <!-- The bottom NavBar features -->
 
@@ -41,15 +41,39 @@
         app:navGraph="@navigation/mobile_navigation" />
 
 
-<!-- This is the editor for the top header on the page -->
+    <!-- This is the editor for the top header on the page -->
+
+    <!-- This is the editor for the Image placeholder. In due time, this will be filled
+  by the information that the applicant needs to be aware of in terms of T's and C's
+  and they'll have a hyperlink that they can press to read the full document. -->
+
+    <!-- This is the editor for the checkbox configurations -->
+
+    <!-- This is the editor for the T's and C's Disclaimer -->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/tAndCsLink"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        android:layout_marginLeft="24dp"-->
+    <!--        android:layout_marginBottom="140dp"-->
+    <!--        android:text="@string/terms_and_cons"-->
+    <!--        android:autoLink="web"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!-- This is the editor for the button on the page -->
 
     <TextView
         android:id="@+id/textHeader"
         android:layout_width="252dp"
         android:layout_height="33dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
-        android:layout_marginBottom="592dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="452dp"
         android:text="@string/header_text"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,65 +81,41 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!-- This is the editor for the Image placeholder. In due time, this will be filled
-  by the information that the applicant needs to be aware of in terms of T's and C's
-  and they'll have a hyperlink that they can press to read the full document. -->
-
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="260dp"
-        android:layout_height="242dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
-        android:layout_marginBottom="320dp"
+        android:layout_width="200dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginBottom="248dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_dialog_dialer" />
 
-<!-- This is the editor for the checkbox configurations -->
-
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginBottom="180dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="168dp"
         android:text="@string/checkbox_dec"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!-- This is the editor for the T's and C's Disclaimer -->
-
-    <TextView
-        android:id="@+id/tAndCsLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginBottom="140dp"
-        android:text="@string/terms_and_cons"
-        android:autoLink="web"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-<!-- This is the editor for the button on the page -->
-
     <Button
         android:id="@+id/btnButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="290dp"
+        android:layout_marginStart="220dp"
         android:layout_marginLeft="290dp"
-        android:layout_marginBottom="95dp"
-        android:text="@string/button_2_text"
+        android:layout_marginBottom="90dp"
         android:onClick="formPage"
+        android:text="@string/button_2_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

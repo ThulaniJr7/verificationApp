@@ -24,7 +24,7 @@ public class MainActivity5 extends AppCompatActivity {
         setContentView(R.layout.activity_main5);
 
 //      Creating the variables to save the content in
-        TextView finDisplayName, finDisplaySurname, finDisplayEmail, finDisplayPhoneNumber, finDisplayIdNum, finDisplayBankName, finDisplayBankAccNum, finDisplayBankBranchCode;
+        TextView finDisplayName, finDisplaySurname, finDisplayEmail, finDisplayPhoneNumber, finDisplayIdNum, finDisplayBankName, finDisplayBankAccNum, finDisplayBankBranchCode, finDisplayLoanAmount;
 
 //      Saving the variables with the information extracted from the user input in relation to the ID name
         finDisplayName = findViewById(R.id.displayName);
@@ -35,6 +35,7 @@ public class MainActivity5 extends AppCompatActivity {
         finDisplayBankName = findViewById(R.id.displayBankName);
         finDisplayBankAccNum = findViewById(R.id.displayBankAccNum);
         finDisplayBankBranchCode = findViewById(R.id.displayBranchCode);
+        finDisplayLoanAmount = findViewById(R.id.displayLoanAmount);
 
 //      This is extracting the information from the shared preference variable
         SharedPreferences Sprefs = getApplicationContext().getSharedPreferences("prefName", Context.MODE_PRIVATE);
@@ -45,9 +46,10 @@ public class MainActivity5 extends AppCompatActivity {
         String emailAddress = Sprefs.getString("emailAddress", "");
         String phoneNumber = Sprefs.getString("phoneNum", "");
         String idNumber = Sprefs.getString("idNumber", "");
-        String bankName = Sprefs.getString("bankName", "");
+        String bankName = Sprefs.getString("bankNameValue", "");
         String bankAccNum = Sprefs.getString("bankAccNum", "");
         String bankBranchCode = Sprefs.getString("bankBranchCode", "");
+        String loanAmount = Sprefs.getString("loanValue", "");
 
 //      Setting the text to display on the front end based on the input information
         finDisplayName.setText(username);
@@ -58,16 +60,20 @@ public class MainActivity5 extends AppCompatActivity {
         finDisplayBankName.setText(bankName);
         finDisplayBankAccNum.setText(bankAccNum);
         finDisplayBankBranchCode.setText(bankBranchCode);
+        finDisplayLoanAmount.setText(loanAmount);
 
     }
 
 //  Function to initiate
-    public void last_verification (View view) {
+    public void last_verification (View view)
+    {
 
 //      Need to create a function that will initiate the backend methods that will take in the users ID number,
 //      run it through the XDS system, retrieve that credit score number, convert it to a readable integer from either
-//      XML/JSON when it comes in from XDS environment, 
+//      XML/JSON when it comes in from XDS environment
+
         startActivity(new Intent(MainActivity5.this, MainActivity6.class));
+        finish();
 
     }
 

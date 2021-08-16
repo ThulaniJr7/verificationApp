@@ -30,6 +30,8 @@ public class MainActivity3 extends AppCompatActivity {
     Button btnSave;
     String Value;
     private String prefName;
+    int c;
+    int validChecks;
 
 
     @Override
@@ -45,6 +47,8 @@ public class MainActivity3 extends AppCompatActivity {
         emailAddress = findViewById(R.id.emailAddressInputForm);
         idNumber = findViewById(R.id.idNumberInputForm);
         btnSave = findViewById(R.id.nextButton);
+        c = 0;
+        validChecks = 0;
 
 //      Need to create all the parameters that will initiate the saving of the variables that are inputted by
 //      the user.
@@ -63,11 +67,32 @@ public class MainActivity3 extends AppCompatActivity {
         Sprefs = getSharedPreferences("prefName", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = Sprefs.edit();
 
+//      Need to create an IF statement to check if there are 13 numbers that were entered to the ID Number
+
+        int idNum = idNumberStr.length();
+
+        for (int i = 0; i != idNumberStr.length(); i++)
+        {
+            c++;
+        }
+
+        if (c == 13)
+        {
+            validChecks = validChecks + 1;
+            c = 0;
+        }
+        else
+        {
+            validChecks = validChecks + 2;
+            c = 0;
+        }
+
+
 //      If statement to check if the user has left anything empty on the input form
         if (username.getText().toString().equals("") || surname.getText().toString().equals("") ||
                 emailAddress.getText().toString().equals("") || idNumber.getText().toString().equals(""))
         {
-            Toast.makeText(getApplicationContext(), "Please make sure you've completed all the fields!",Toast.LENGTH_SHORT).show();
+            validChecks = validChecks + 3;
         }
         else
 //          Else statement that will take all the string values and save them accordingly and then
@@ -79,9 +104,32 @@ public class MainActivity3 extends AppCompatActivity {
             editor.putString("emailAddress", emailAddressStr);
             editor.putString("idNumber", idNumberStr);
             editor.commit();
+            validChecks = validChecks + 1;
 
-            startActivity(new Intent(MainActivity3.this, MainActivity4.class));
         }
+
+        if (validChecks == 3)
+        {
+            Toast.makeText(getApplicationContext(), "Please check that you've put in the correct amount of numbers for your ID!",Toast.LENGTH_SHORT).show();
+            validChecks = 0;
+        }
+        else if (validChecks == 4)
+        {
+            Toast.makeText(getApplicationContext(), "Please make sure you've completed all the fields!",Toast.LENGTH_SHORT).show();
+            validChecks = 0;
+        }
+        else if (validChecks == 5)
+        {
+            Toast.makeText(getApplicationContext(), "Please make sure you've completed all the fields and the correct amount of numbers for your ID!",Toast.LENGTH_SHORT).show();
+            validChecks = 0;
+        }
+        else if (validChecks == 2)
+        {
+            startActivity(new Intent(MainActivity3.this, MainActivity4.class));
+            finish();
+            validChecks = 0;
+        }
+
 
     }
 

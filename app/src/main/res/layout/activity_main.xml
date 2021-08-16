@@ -41,31 +41,31 @@
 
 <!-- This is the editor for the top header on the page -->
 
+    <!-- This is the editor for the button on the page -->
+
     <TextView
         android:id="@+id/welcomeText"
-        android:layout_width="320dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginBottom="430dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="332dp"
         android:text="@string/home_display"
-        android:textSize="18sp"
+        android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!-- This is the editor for the button on the page -->
-
     <Button
         android:id="@+id/btnButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/home_button_text"
-        android:layout_marginStart="148dp"
-        android:layout_marginLeft="148dp"
-        android:layout_marginBottom="324dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginLeft="136dp"
+        android:layout_marginBottom="228dp"
         android:onClick="nextPage"
+        android:text="@string/home_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
