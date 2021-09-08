@@ -5,10 +5,10 @@
         <!-- Primary brand color. -->
 
         <!-- The colour below will edit the top nav bar colour, buttons and bottom nav bar selection -->
-        <item name="colorPrimary">@color/Red</item>
+        <item name="colorPrimary">@color/OrangeRed</item>
 
         <!-- The colour below will edit the top display where the clock and battery life displays -->
-        <item name="colorPrimaryVariant">@color/Red</item>
+        <item name="colorPrimaryVariant">@color/OrangeRed</item>
 
         <!-- The colour below will edit the text colour of the buttons -->
         <item name="colorOnPrimary">@color/white</item>

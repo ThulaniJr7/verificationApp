@@ -7,11 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity4">
 
-<!-- This is the second page of the information retrieval process -->
-<!-- Create an input for bank, account number and branch code -->
-
-<!-- The bottom NavBar features -->
-
+<!-- This is the editor for the bottom NavBar features -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
@@ -24,8 +20,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-<!-- The bottom NavBar display features -->
-
+<!-- This is the editor for the page fragment -->
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -40,10 +35,7 @@
         app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/mobile_navigation" />
 
-
-<!-- This is the editor for the Banks -->
-
-
+<!-- This is the editor for Bank header and Dropdown Bank option -->
     <TextView
         android:id="@+id/bankDropDownHeader"
         android:layout_width="wrap_content"
@@ -57,25 +49,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!--    <EditText-->
-<!--        android:id="@+id/bankInputForm"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="52dp"-->
-<!--        android:layout_marginLeft="52dp"-->
-<!--        android:layout_marginBottom="430dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="textPersonName"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        android:background="@drawable/my_border"/>-->
-
-    <!-- The code below is for the dropdown option. I haven't figured
- out how to extract the selection for this as yet so I will keep it
- as a manual input for now! -->
-
     <Spinner
         android:id="@+id/bankNameInputForm"
         android:layout_width="215dp"
@@ -88,10 +61,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
-<!-- This is the editor for the Bank Account Number -->
-
-
+<!-- This is the editor for the Bank Account Number header and Input Form -->
     <TextView
         android:id="@+id/bankAccNumberHeader"
         android:layout_width="wrap_content"
@@ -121,9 +91,7 @@
         android:background="@drawable/my_border"/>
 
 
-<!-- This is the editor for the Bank Branch Code -->
-
-
+<!-- This is the editor for the Bank Branch Code header and Input Form -->
     <TextView
         android:id="@+id/bankBranchCodeHeader"
         android:layout_width="wrap_content"
@@ -153,9 +121,7 @@
         android:background="@drawable/my_border"/>
 
 
-<!-- This is the editor for the submit button -->
-
-
+<!--  This is the editor for the button to navigate to the next activity -->
     <Button
         android:id="@+id/bankButton"
         android:layout_width="wrap_content"
@@ -165,10 +131,14 @@
         android:layout_marginBottom="90dp"
         android:text="@string/verifyButton"
         android:onClick="formDisplay"
+        android:backgroundTint="@color/OrangeRed"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+<!--  Code written and Compiled by Thulani Jr Langa.
+      Contact Details: thulanilanga@yahoo.com or thulanilangajr@gmail.com -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

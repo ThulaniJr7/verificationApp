@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity6 extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener
+public class MainDeclineActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener
 {
 
     BottomNavigationView bottomNavigationView;
@@ -19,13 +19,13 @@ public class MainActivity6 extends AppCompatActivity implements BottomNavigation
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main6);
+        setContentView(R.layout.activity_main_decline);
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.nav_view);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.ic_baseline_money_24);
+        getSupportActionBar().setIcon(R.drawable.ic_logos_02);
 
     }
 
@@ -33,7 +33,7 @@ public class MainActivity6 extends AppCompatActivity implements BottomNavigation
     {
 
 //      Changing to a new activity
-        startActivity(new Intent(MainActivity6.this, MainActivity2.class));
+        startActivity(new Intent(MainDeclineActivity.this, MainActivity2.class));
         finish();
 
     }
@@ -46,7 +46,7 @@ public class MainActivity6 extends AppCompatActivity implements BottomNavigation
         switch (id)
         {
             case R.id.navigation_home:
-                Intent intent = new Intent(MainActivity6.this, MainActivity.class);
+                Intent intent = new Intent(MainDeclineActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
                 return true;
@@ -54,5 +54,4 @@ public class MainActivity6 extends AppCompatActivity implements BottomNavigation
 
         return false;
     }
-
 }

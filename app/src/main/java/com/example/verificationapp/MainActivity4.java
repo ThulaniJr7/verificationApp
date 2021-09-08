@@ -1,11 +1,13 @@
 package com.example.verificationapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,6 +16,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 //  THIS Activity will be the second page that allows the user to fill in their details for the verification process.
 //  The user should fill in their bank, account number, branch code and submit.
 //  The layout functionality can be found in the "activity_main4.xml" file for editing.
@@ -21,28 +25,35 @@ import android.widget.Toast;
 //  This java class is used for any functional calls and methods that need to be executed to perform
 //  a specific action on the runtime environment.
 
-public class MainActivity4 extends AppCompatActivity {
+public class MainActivity4 extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener
+{
 
-//  Creating the variables needed for the Shared Preferences section
+//  Initiating relevant java variables needed
     SharedPreferences Sprefs;
-//    EditText bankName;
     EditText bankAccNum;
     EditText bankBranchCode;
     String value;
     Button btnNext;
     Spinner bankSpinner;
     private String prefName;
+    BottomNavigationView bottomNavigationView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
 
 //      Initializing the variables and using the information that was stored in the id and saving them
-//        bankName = findViewById(R.id.bankInputForm);
         bankAccNum = findViewById(R.id.bankAccNumInputForm);
         bankBranchCode = findViewById(R.id.bankBranchCodeInputForm);
         btnNext = findViewById(R.id.bankButton);
+
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.nav_view);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.ic_logos_02);
 
         Spinner bankSpinner = (Spinner) findViewById(R.id.bankNameInputForm);
 
@@ -72,7 +83,6 @@ public class MainActivity4 extends AppCompatActivity {
                     if (bankNameValue.equals(bankSpinner.getItemAtPosition(i).toString()))
                     {
                         bankSpinner.setSelection(i);
-//                        Toast.makeText(FirstVerification.this, bankSpinner.getSelectedItem().toString(), Toast.LENGTH_LONG).show();
                         break;
                     }
 
@@ -88,9 +98,8 @@ public class MainActivity4 extends AppCompatActivity {
 
     }
 
-    public void formDisplay (View view) {
-
-//        String bankNameStr = bankName.getText().toString();
+    public void formDisplay (View view)
+    {
         String bankAccNumStr = bankAccNum.getText().toString();
         String bankBranchCodeStr = bankBranchCode.getText().toString();
 
@@ -102,7 +111,6 @@ public class MainActivity4 extends AppCompatActivity {
 //                bankBranchCode.getText().toString().equals(""))
 
 //      If statement to check if the user has left anything empty on the input form
-
         if (bankAccNum.getText().toString().equals("") || bankBranchCode.getText().toString().equals(""))
         {
             Toast.makeText(getApplicationContext(), "Please make sure you've completed all the fields!",Toast.LENGTH_SHORT).show();
@@ -112,7 +120,6 @@ public class MainActivity4 extends AppCompatActivity {
 //          navigate to the next page
         {
 
-//            editor.putString("bankName", bankNameStr);
             editor.putString("bankAccNum", bankAccNumStr);
             editor.putString("bankBranchCode", bankBranchCodeStr);
             editor.commit();
@@ -122,4 +129,22 @@ public class MainActivity4 extends AppCompatActivity {
         }
 
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item)
+    {
+        int id = item.getItemId();
+
+        switch (id)
+        {
+            case R.id.navigation_home:
+                Intent intent = new Intent(MainActivity4.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+                return true;
+        }
+
+        return false;
+    }
+
 }

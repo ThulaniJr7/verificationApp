@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity6">
 
-    <!-- The bottom NavBar features -->
-
+<!-- This is the editor for the bottom NavBar features -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
@@ -20,8 +19,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-    <!-- The bottom NavBar display features -->
-
+<!-- This is the editor for the page fragment -->
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -37,9 +35,6 @@
         app:navGraph="@navigation/mobile_navigation" />
 
 <!-- This is the editor for the message that all customers will get upon validation -->
-
-    <!-- This is the editor for the message once the applicant status is approved -->
-
     <TextView
         android:id="@+id/generalMsg"
         android:layout_width="wrap_content"
@@ -54,6 +49,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+<!-- This is the editor for the message if there is a problem with the application -->
+
+    <!-- This is the editor for the button to navigate to the next activity -->
     <TextView
         android:id="@+id/appApprovalMsg"
         android:layout_width="wrap_content"
@@ -62,14 +60,13 @@
         android:layout_marginLeft="24dp"
         android:layout_marginBottom="244dp"
         android:width="320dp"
-        android:text="@string/application_msg_prov_approved"
+        android:text="@string/application_msg_null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="128dp"
@@ -77,57 +74,14 @@
         android:layout_marginBottom="136dp"
         android:onClick="newApplicationForm"
         android:text="@string/button_approved"
+        android:backgroundTint="@color/OrangeRed"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- This is the editor for the message once the applicant status is pending -->
-
-<!--    <TextView-->
-<!--        android:id="@+id/appPendingMsg"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="52dp"-->
-<!--        android:layout_marginLeft="52dp"-->
-<!--        android:layout_marginBottom="300dp"-->
-<!--        android:width="320dp"-->
-<!--        android:text="@string/application_msg_pending"-->
-<!--        android:textColor="@color/LightBlue"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/button2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="268dp"-->
-<!--        android:layout_marginLeft="268dp"-->
-<!--        android:layout_marginBottom="220dp"-->
-<!--        android:text="@string/button_pending"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-<!-- This is the editor for the message once the applicant status is declined -->
-
-<!--    <TextView-->
-<!--        android:id="@+id/appDeclinedMsg"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="52dp"-->
-<!--        android:layout_marginLeft="52dp"-->
-<!--        android:layout_marginBottom="124dp"-->
-<!--        android:width="320dp"-->
-<!--        android:text="@string/application_msg_declined"-->
-<!--        android:textColor="@color/Red"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
+<!--  Code written and Compiled by Thulani Jr Langa.
+      Contact Details: thulanilanga@yahoo.com or thulanilangajr@gmail.com -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

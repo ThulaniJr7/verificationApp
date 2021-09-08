@@ -2,12 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize">
+    tools:context=".MainDeclineActivity">
 
-<!--  This is the editor for the bottom NavBar features -->
+<!-- This is the editor for the bottom NavBar features -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
@@ -20,7 +19,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-<!--  This is the editor for the page fragment -->
+<!-- This is the editor for the page fragment -->
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -32,34 +31,48 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/mobile_navigation" />
 
-<!--  This is the editor for the welcome text on the page -->
+<!-- This is the editor for the message that all customers will get upon validation -->
     <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginBottom="332dp"
-        android:text="@string/home_display"
-        android:textSize="14dp"
+        android:id="@+id/generalMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="380dp"
+        android:width="320dp"
+        android:text="@string/application_msg1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!--  This is the editor for the button to navigate to the next activity -->
-    <Button
-        android:id="@+id/btnButton1"
+<!-- This is the editor for the message once the applicant status is declined -->
+    <TextView
+        android:id="@+id/appApprovalMsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginLeft="136dp"
-        android:layout_marginBottom="228dp"
-        android:onClick="nextPage"
-        android:text="@string/home_button_text"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="280dp"
+        android:width="320dp"
+        android:text="@string/application_msg_declined"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!-- This is the editor for the button to navigate to the next activity -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginBottom="136dp"
+        android:onClick="newApplicationForm"
+        android:text="@string/button_approved"
         android:backgroundTint="@color/OrangeRed"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"

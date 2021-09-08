@@ -1,15 +1,19 @@
 package com.example.verificationapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 //  THIS Activity will be the first page that allows the user to fill in their details for the verification process.
 //  The user should be able to enter their name, surname, email address, phone number and ID number and proceed.
@@ -18,10 +22,10 @@ import android.widget.Toast;
 //  This java class is used for any functional calls and methods that need to be executed to perform
 //  a specific action on the runtime environment.
 
-public class MainActivity3 extends AppCompatActivity {
+public class MainActivity3 extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener
+{
 
-//  ----- Variables for the user inputs will be saved and utilized below -----
-
+//  Initiating relevant java variables needed
     SharedPreferences Sprefs;
     EditText username;
     EditText surname;
@@ -32,16 +36,15 @@ public class MainActivity3 extends AppCompatActivity {
     private String prefName;
     int c;
     int validChecks;
-
+    BottomNavigationView bottomNavigationView;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-//      We use the following declarations to store information into the variables from the information
-//      that was retrieved from the relevant ID names and the inputs
-
+//      Storing data from the user inputs into variables
         username = findViewById(R.id.nameInputForm);
         surname = findViewById(R.id.surnameInputForm);
         emailAddress = findViewById(R.id.emailAddressInputForm);
@@ -50,32 +53,39 @@ public class MainActivity3 extends AppCompatActivity {
         c = 0;
         validChecks = 0;
 
-//      Need to create all the parameters that will initiate the saving of the variables that are inputted by
-//      the user.
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.nav_view);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.ic_logos_02);
 
     }
 
 //  The code below is used to navigate from this current page to the next one while executing the
 //  necessary code to save the information that was inputted by the user
-    public void formPage2 (View view) {
+    public void formPage2 (View view)
+    {
 
+//      Get the text from the variables and convert it to string in a new variable
         String nameStr = username.getText().toString();
         String surnameStr = surname.getText().toString();
         String emailAddressStr = emailAddress.getText().toString();
         String idNumberStr = idNumber.getText().toString();
 
+//      Creating a Shared Preference to store multiple variable data for usage in different activities
         Sprefs = getSharedPreferences("prefName", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = Sprefs.edit();
 
-//      Need to create an IF statement to check if there are 13 numbers that were entered to the ID Number
-
+//      Retrieve the string length of the variable inputted for the ID number
         int idNum = idNumberStr.length();
 
+//      For loop that will increment a variable based on the length of another variable
         for (int i = 0; i != idNumberStr.length(); i++)
         {
             c++;
         }
 
+//      IF statement that checks if there are 13 numbers that were entered to the ID Number input
         if (c == 13)
         {
             validChecks = validChecks + 1;
@@ -95,8 +105,7 @@ public class MainActivity3 extends AppCompatActivity {
             validChecks = validChecks + 3;
         }
         else
-//          Else statement that will take all the string values and save them accordingly and then
-//          navigate to the next page
+//          Else statement that will take all the string values and save them accordingly
         {
 
             editor.putString("username", nameStr);
@@ -108,6 +117,8 @@ public class MainActivity3 extends AppCompatActivity {
 
         }
 
+//      If statement that checks the value of the variable and either displays a certain notification or
+//      navigates to another activity
         if (validChecks == 3)
         {
             Toast.makeText(getApplicationContext(), "Please check that you've put in the correct amount of numbers for your ID!",Toast.LENGTH_SHORT).show();
@@ -130,7 +141,22 @@ public class MainActivity3 extends AppCompatActivity {
             validChecks = 0;
         }
 
-
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item)
+    {
+        int id = item.getItemId();
+
+        switch (id)
+        {
+            case R.id.navigation_home:
+                Intent intent = new Intent(MainActivity3.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+                return true;
+        }
+
+        return false;
+    }
 }

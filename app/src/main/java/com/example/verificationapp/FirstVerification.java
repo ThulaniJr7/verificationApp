@@ -1,5 +1,6 @@
 package com.example.verificationapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -13,6 +14,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -23,7 +25,12 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class FirstVerification extends AppCompatActivity {
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class FirstVerification extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener
+{
+
+    BottomNavigationView bottomNavigationView;
 
     ImageView imageView;
     Button button;
@@ -34,8 +41,10 @@ public class FirstVerification extends AppCompatActivity {
     int b;
     int validCheck;
 
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_verification);
@@ -45,6 +54,12 @@ public class FirstVerification extends AppCompatActivity {
         phoneNum = findViewById(R.id.editTextNumber);
         b = 0;
         validCheck = 0;
+
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.nav_view);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.ic_logos_02);
 
 //      Request for camera runtime permission
         if(ContextCompat.checkSelfPermission(FirstVerification.this, Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED)
@@ -166,6 +181,23 @@ public class FirstVerification extends AppCompatActivity {
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
             imageView.setImageBitmap(bitmap);
         }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item)
+    {
+        int id = item.getItemId();
+
+        switch (id)
+        {
+            case R.id.navigation_home:
+                Intent intent = new Intent(FirstVerification.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+                return true;
+        }
+
+        return false;
     }
 
 }

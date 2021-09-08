@@ -7,11 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity3">
 
-<!-- This is the first page of the information retrieval process -->
-<!-- Create an input for name, surname, email address, phone number & ID number -->
-
-    <!-- The bottom NavBar features -->
-
+<!-- This is the editor for the bottom NavBar features -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
@@ -24,8 +20,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-    <!-- The bottom NavBar display features -->
-
+<!-- This is the editor for the page fragment -->
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -40,8 +35,7 @@
         app:layout_constraintVertical_bias="0.0"
         app:navGraph="@navigation/mobile_navigation" />
 
-<!-- This is the editor for the user First Name -->
-
+<!-- This is the editor for the user First Name and Input Form -->
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -70,8 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/my_border"/>
 
-<!-- This is the editor for the user Surname -->
-
+<!-- This is the editor for the user Surname and Input Form -->
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
@@ -100,8 +93,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/my_border"/>
 
-<!-- This is the editor for the user Email Address -->
-
+<!-- This is the editor for the user Email Address and Input Form -->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -130,8 +122,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/my_border"/>
 
-<!-- This is the editor for the user ID Number -->
-
+<!-- This is the editor for the user ID Number and Input Form -->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -160,8 +151,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:background="@drawable/my_border"/>
 
-<!-- This is the editor for the Next Button -->
-
+<!-- This is the editor for the button to navigate to the next activity -->
     <Button
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
@@ -171,10 +161,14 @@
         android:layout_marginBottom="90dp"
         android:text="@string/next_button"
         android:onClick="formPage2"
+        android:backgroundTint="@color/OrangeRed"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+<!--  Code written and Compiled by Thulani Jr Langa.
+      Contact Details: thulanilanga@yahoo.com or thulanilangajr@gmail.com -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

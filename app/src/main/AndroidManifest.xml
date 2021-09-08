@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.verificationapp">
-
-    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Declaring the permission needed to use the camera functionality on the app -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Declaring the permission needed to use the internet on the app -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_tdm"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_tdm_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VerificationApp">
+        <activity
+            android:name=".MainDeclineActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivityProvApproved"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivityPending"
+            android:exported="true" />
+
         <meta-data
             android:name="com.google.android.actions"
             android:resource="@xml/my_border" />

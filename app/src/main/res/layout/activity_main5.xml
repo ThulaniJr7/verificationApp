@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity5">
 
-    <!-- The bottom NavBar features -->
-
+<!--  This is the editor for the bottom NavBar features -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
@@ -21,8 +20,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 
-    <!-- The bottom NavBar display features -->
-
+<!--  This is the editor for the page fragment -->
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -37,9 +35,7 @@
         app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/mobile_navigation" />
 
-<!-- These are the labels and information for the table -->
-
-<!-- First Name Label -->
+<!-- This is the editor for the First Name label and Display -->
     <TextView
         android:id="@+id/nameView"
         android:layout_width="wrap_content"
@@ -67,8 +63,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Surname Label -->
-
+<!-- This is the editor for the Surname label and Display -->
     <TextView
         android:id="@+id/surnameView"
         android:layout_width="wrap_content"
@@ -96,7 +91,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!-- Email Address Label -->
+<!-- This is the editor for the Phone Number label and Display -->
     <TextView
         android:id="@+id/phoneNumberView"
         android:layout_width="wrap_content"
@@ -124,7 +119,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!-- Email Address Label -->
+<!-- This is the editor for the Email Address label and Display -->
     <TextView
         android:id="@+id/emailView"
         android:layout_width="wrap_content"
@@ -152,7 +147,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!-- ID Number Label -->
+<!-- This is the editor for the ID Number label and Display -->
     <TextView
         android:id="@+id/idNumView"
         android:layout_width="wrap_content"
@@ -180,7 +175,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!-- Bank Name Label -->
+<!-- This is the editor for the Bank Name label and Display -->
     <TextView
         android:id="@+id/bankNameView"
         android:layout_width="wrap_content"
@@ -208,7 +203,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!-- Bank Account Number Label -->
+<!-- This is the editor for the Bank Account Number label and Display -->
     <TextView
         android:id="@+id/bankAccNumView"
         android:layout_width="wrap_content"
@@ -236,7 +231,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!-- Bank Branch Code Label -->
+<!-- This is the editor for the Branch Code label and Display -->
     <TextView
         android:id="@+id/bankBranchCodeView"
         android:layout_width="wrap_content"
@@ -264,7 +259,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-<!-- Loan Amount Code Label -->
+<!-- This is the editor for the Loan Amount label and Display -->
     <TextView
         android:id="@+id/loanAmountView"
         android:layout_width="wrap_content"
@@ -291,24 +286,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-<!--  This is the editor for the text underneath the table display -->
 
-    <!-- This is the editor for the verify button -->
-
-<!--    <TextView-->
-<!--        android:id="@+id/userInfoHeader"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="44dp"-->
-<!--        android:layout_marginLeft="44dp"-->
-<!--        android:layout_marginBottom="136dp"-->
-<!--        android:width="300dp"-->
-<!--        android:text="@string/user_info_display"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
+<!-- This is the editor for the button to navigate to the next activity -->
     <Button
         android:id="@+id/btnVerificationButton"
         android:layout_width="wrap_content"
@@ -317,10 +296,14 @@
         android:layout_marginLeft="290dp"
         android:layout_marginBottom="90dp"
         android:text="@string/finalVerificationButton"
-        android:onClick="last_verification"
+        android:backgroundTint="@color/OrangeRed"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+<!--  Code written and Compiled by Thulani Jr Langa.
+      Contact Details: thulanilanga@yahoo.com or thulanilangajr@gmail.com -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
